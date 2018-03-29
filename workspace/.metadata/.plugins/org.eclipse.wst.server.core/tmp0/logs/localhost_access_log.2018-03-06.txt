@@ -1,0 +1,13 @@
+127.0.0.1 - - [06/Mar/2018:20:45:30 +0900] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:20:45:33 +0900] "GET /eStore/ HTTP/1.1" 200 95
+127.0.0.1 - - [06/Mar/2018:22:49:23 +0900] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:22:49:24 +0900] "GET /eStore/ HTTP/1.1" 500 4091
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:22:49:24 +0900] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:22:52:52 +0900] "GET /eStore/ HTTP/1.1" 200 10519
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:22:52:52 +0900] "GET /assets/js/vendor/holder.min.js HTTP/1.1" 404 1116
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:22:52:52 +0900] "GET /dist/js/bootstrap.min.js HTTP/1.1" 404 1106
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:22:52:52 +0900] "GET /eStore/resoureces/css/carousel.css%22 HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:22:52:52 +0900] "GET /eStore/resources/css/bootstrap.min.css HTTP/1.1" 200 144877
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:22:52:52 +0900] "GET /eStore/resources/js/bootstrap.min.js HTTP/1.1" 200 48944
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:22:52:52 +0900] "GET /dist/js/bootstrap.min.js HTTP/1.1" 404 1106
+0:0:0:0:0:0:0:1 - - [06/Mar/2018:22:52:52 +0900] "GET /assets/js/vendor/holder.min.js HTTP/1.1" 404 1116
