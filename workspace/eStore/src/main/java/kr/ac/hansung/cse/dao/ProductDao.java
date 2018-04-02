@@ -37,6 +37,7 @@ public class ProductDao {
 
 				product.setId(rs.getInt("id"));
 				product.setName(rs.getString("name"));
+				product.setPrice(rs.getInt("price"));
 				product.setCategory(rs.getString("category"));
 				product.setManufacturer(rs.getString("manufacturer"));
 				product.setUnitInStock(rs.getInt("unitInStock"));
@@ -89,6 +90,7 @@ public class ProductDao {
 
 				product.setId(rs.getInt("id"));
 				product.setName(rs.getString("name"));
+				product.setPrice(rs.getInt("price"));
 				product.setCategory(rs.getString("category"));
 				product.setManufacturer(rs.getString("manufacturer"));
 				product.setUnitInStock(rs.getInt("unitInStock"));

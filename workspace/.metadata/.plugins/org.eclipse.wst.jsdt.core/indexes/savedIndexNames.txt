@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+D:\hansung\2018_1\WebFrameWork\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2034457723.index
-3650372154.index
-411466300.index
-2628418383.index
-3907042856.index
-4101714603.index
-826518745.index
