@@ -23,6 +23,8 @@ public class ProductDao {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
+
+	
 	public List<Product> getProducts() {
 
 		String sqlStatement = "Select * from product"; // record -> object
@@ -120,4 +122,6 @@ public class ProductDao {
 				new Object[] { name, category, price, manufacturer, unitInStock, description, id }) == 1);
 
 	}
+
+
 }
