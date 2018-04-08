@@ -11,7 +11,7 @@
 	<h1>
 		Product Detail
 	</h1>
-	<h4>Here is the detail information of the prduct!</h4>
+	<h4>Here is the detail information of the product!</h4>
 	<div class="row">
 
 		<div class="col-md-6">
@@ -19,6 +19,7 @@
 				value="/resources/images/${product.id}.png" />
 			
 			<img src="<c:url value="${imageFilename}" />" alt="image" style="width: 70%" />
+			</div>
 			<div class="col-md-6">
 				<h3>${product.name}</h3>
 				<p>${product.description}</p>
@@ -26,7 +27,8 @@
 				<p>${product.price}원</p>
 			</div>
 
-		</div>
+		
+			
 		</div>
 </body>
 </html>
