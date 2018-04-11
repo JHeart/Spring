@@ -1,4 +1,4 @@
-### Eclipse ###
+ï»¿### Eclipse ###
 *.pydevproject
 .metadata
 .gradle
@@ -15,7 +15,7 @@ local.properties
 # External tool builders
 .externalToolBuilders/
 
-# Locally stored ¡°Eclipse launch configurations¡±
+# Locally stored ï¿½ï¿½Eclipse launch configurationsï¿½ï¿½
 *.launch
 
 # CDT-specific
