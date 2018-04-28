@@ -81,7 +81,6 @@ public class testMain {
 		Transaction tx= session.beginTransaction();
 		
 		
-		
 		session.save(person1); //sql statement
 		session.save(person2); //sql statement
 		
