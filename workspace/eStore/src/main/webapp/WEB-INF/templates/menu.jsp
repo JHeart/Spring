@@ -23,6 +23,11 @@
 						<li class="nav-item"><a class="nav-link"
 							href="<c:url value="/admin"/>">AdminPage</a></li>
 					</c:if>
+
+					<c:if test="${pageContext.request.userPrincipal.name != 'admin' }">
+						<li class="nav-item"><a class="nav-link"
+							href="<c:url value="/cart"/>">Cart</a></li>
+					</c:if>
 					
 					<li class="nav-item"><a class="nav-link"
 						href="javascript:document.getElementById('logout').submit()">Logout</a></li>
@@ -37,11 +42,9 @@
 
 				<c:if test="${pageContext.request.userPrincipal.name==null }">
 					<li class="nav-item"><a class="nav-link"
-						href="<c:url value="/login"/>">Login</a>
-					</li>
+						href="<c:url value="/login"/>">Login</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="<c:url value="/register"/>">Register</a>
-					</li>
+						href="<c:url value="/register"/>">Register</a></li>
 				</c:if>
 
 
