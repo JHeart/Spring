@@ -12,7 +12,7 @@ import kr.ac.hansung.model.User;
 @Service
 public class UserService {
 
-	private static final AtomicLong counter = new AtomicLong();
+	private static final AtomicLong counter = new AtomicLong();//id를 자동으로 생성하기위해서
 	
 	private static List<User> users;
 	
@@ -20,7 +20,7 @@ public class UserService {
 		
 		users = new ArrayList<User>();
 		
-		users.add(new User(counter.incrementAndGet(), "Sam", 30, 70000));
+		users.add(new User(counter.incrementAndGet(), "Sam", 30, 70000));//id,name,age,salary
 		users.add(new User(counter.incrementAndGet(), "Tom", 40, 50000));
 		users.add(new User(counter.incrementAndGet(), "Jennie", 45, 30000));
 		users.add(new User(counter.incrementAndGet(), "Sam", 50, 40000));

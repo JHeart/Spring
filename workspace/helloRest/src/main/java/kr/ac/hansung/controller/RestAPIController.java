@@ -38,16 +38,17 @@ public class RestAPIController {
 		
 		List<User> users = userService.findAllUsers();
 		if(users.isEmpty()) {
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);//responseEntity-> header,body, Http.status를 담아서 requestmessage에 담을수 있다.
 		}
 		
-		return new ResponseEntity<List<User>>(users, HttpStatus.OK);
+		return new ResponseEntity<List<User>>(users, HttpStatus.OK);//list of object -> json 
+		//jacksondatabind가 역할을 한다.
 	}
 	
 	
 	// --Retrieve Single Users
 		@RequestMapping(value="/users/{id}", method=RequestMethod.GET)
-		public ResponseEntity<User> GetUser(@PathVariable("id") long id){ 
+		public ResponseEntity<User> GetUser(@PathVariable("id") long id){//template variable value가 id에 담긴다. 
 			
 			
 			
@@ -61,9 +62,9 @@ public class RestAPIController {
 		
 		// --Create a User
 		@RequestMapping(value="/users", method=RequestMethod.POST) //Request body(json)
-		public ResponseEntity<Void> createUser(@RequestBody User user,
+		public ResponseEntity<Void> createUser(@RequestBody User user,//body부분에는 없고 header에 uri만
 				UriComponentsBuilder ucBuilder){ 
-		
+		//Requestbody에 있는 body에 있는 내용이 json형태로 되어있는데 객체로 변환
 			if(userService.isUserExist(user)) {
 				//to do list: exception
 				throw new UserDuplicateException(user.getName());
@@ -73,7 +74,9 @@ public class RestAPIController {
 			
 			HttpHeaders headers = new HttpHeaders();
 			headers.setLocation(ucBuilder.path("api/users/{id}").buildAndExpand(user.getId()).toUri());
+			//location을 setting user.getId()가 id에 들어간다.
 			return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
+			//body는 필요없고 header를 만들어서 방금만든 사용자의 uri를 보내준다
 		}
 		
 		// --------Update a User -----------

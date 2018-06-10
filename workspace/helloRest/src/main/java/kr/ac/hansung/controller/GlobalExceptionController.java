@@ -12,14 +12,15 @@ import kr.ac.hansung.exception.UserDuplicateException;
 import kr.ac.hansung.exception.UserNotFoundException;
 
 
-@ControllerAdvice
+@ControllerAdvice//전역적으로 다음 exception을 처리
 public class GlobalExceptionController {
 
 	
 	@ExceptionHandler(UserNotFoundException.class)
 	public ResponseEntity<ErrorResponse> 
 	handleUserNotFoundException(HttpServletRequest req, UserNotFoundException ex){
-		
+		//request를 할때  url을 받기 위해서
+		//error내용을 responsebody에 담아서 사용자에게 보여주기 위해서
 		String requestURL = req.getRequestURL().toString();
 		ErrorResponse errorResponse = new ErrorResponse();
 		errorResponse.setRequestURL(requestURL);
