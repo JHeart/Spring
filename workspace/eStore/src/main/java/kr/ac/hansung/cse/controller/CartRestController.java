@@ -61,10 +61,10 @@ public class CartRestController {
 	public ResponseEntity<Void> addItem(@PathVariable(value = "productId") int productId) {
 		Product product = productService.getProductById(productId);
 
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();//현재 인증된 사용자 정보를 가져온다.
 		String username = authentication.getName();
 
-		User user = userService.getUserByUsername(username);
+		User user = userService.getUserByUsername(username);//가져온 유저 정보를 통해서 service를 수행
 		Cart cart = user.getCart();
 
 		List<CartItem> cartItems = cart.getCartItems();

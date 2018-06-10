@@ -11,7 +11,7 @@
 
 		 <sf:form 
 		 action="${pageContext.request.contextPath}/register" method="post" modelAttribute="user">
-
+		<!--spring form 을 사용하면 자동으로csrf를 전송  -->
 			<h3>기본 정보</h3>
 			
 	

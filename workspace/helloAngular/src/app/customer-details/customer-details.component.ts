@@ -10,6 +10,7 @@ import { DataService } from '../data.service';
 })
 export class CustomerDetailsComponent implements OnInit {
  
+  //input customer를 부모로 부터 받은것이다.
   @Input() customer: Customer;
  
   constructor(private dataService: DataService) {}
@@ -17,6 +18,7 @@ export class CustomerDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+  //delete button을 click를 할경우 eventhandler
   delete(): void {
     this.dataService.delete(this.customer.id).then(() => this.goBack());
   }

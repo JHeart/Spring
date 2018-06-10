@@ -13,12 +13,13 @@ import org.springframework.stereotype.Repository;
 
 import kr.ac.hansung.cse.model.User;
 
-@Repository
-@Transactional
+@Repository //dao->repository
+@Transactional //각가의 method를 transaction으로 
 public class UserDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
+	//sessionFactory는 bean으로 등록
 	
 	
 	@Autowired

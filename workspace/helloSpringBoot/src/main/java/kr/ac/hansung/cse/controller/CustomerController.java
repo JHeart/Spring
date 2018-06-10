@@ -49,6 +49,7 @@ public class CustomerController {
 		logger.debug("Calling postCustomer( )" );
 		
 		String firstName = customer.getFirstName();
+	
 		String lastName = customer.getLastName();
 				
 		repository.save(new Customer(firstName, lastName));

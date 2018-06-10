@@ -26,7 +26,7 @@ import { HttpModule } from '@angular/http';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [DataService],
+  providers: [DataService],//inject할 서비스를 전체 모듈에 주입을 할 수 있다.
   bootstrap: [AppComponent]
 })
 export class AppModule { }

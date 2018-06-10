@@ -18,7 +18,7 @@
 		</c:if>
 		
 		
-		<form action="<c:url value="/login"/>" method="post">
+		<form action="<c:url value="/login"/>" method="post"><!--html form을 사용하면 csrf를 전송해야 한다. -->
 			<div class="form-group">
 				<label for="username">Username:</label> <input type="text"
 					class="form-control" id="username" placeholder="Enter username"
